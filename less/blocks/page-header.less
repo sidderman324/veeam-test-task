@@ -1,0 +1,34 @@
+.container {
+  justify-content: space-between;
+}
+
+header {
+  background: -webkit-linear-gradient(40deg, #fff 71%, #54b948 71%, #54b948 72%, #0067c5 14%);
+  background: -o-linear-gradient(40deg, #fff 71%, #54b948 71%, #54b948 72%, #0067c5 14%);
+  background: linear-gradient(130deg, #fff 71%, #54b948 71%, #54b948 72%, #0067c5 14%);
+  height: 80px;
+  border-bottom: 4px solid @header-bdr;
+}
+
+.header__logo {
+  padding: 13px 0;
+  margin-left: -10px;
+}
+
+.header__offers {
+  text-decoration: none;
+  // background-color: @blue-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-text {
+    color: #fff;
+    font-family: @main-font;
+    font-size: 14px;
+
+    &--big {
+      font-size: 19px;
+    }
+  }
+}
