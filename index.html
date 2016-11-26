@@ -27,36 +27,45 @@
     </div>
   </header>
 
-  <section class="download">
-    <div class="container">
 
-      <div class="download-new">NEW</div>
-      <h1 class="download__title">Fast backup and quick recovery</h1>
-      <p class="download__text">from NetApp snapchots with Veeam Availabiliti Suite v8</p>
+  <div class="container">
+    <section class="download">
 
-      <a href="#" class="download__netapp-link">
-        <h2 class="download__netapp-link-title">NetApp</h2>
-        <p class="download__netapp-link-text">Alliance Partner</p>
-      </a>
+      <div class="description">
+        <div class="download__new">NEW</div>
 
-      <form action="" class="download__form">
-        <h2 class="download__form-title">Download</h2>
-        <h2 class="download__form-title">Veeam Availability Suite v8</h2>
-        <input type="text" name="first-name" placeholder="First Name" class="download__form-input">
-        <input type="text" name="last-name" placeholder="Last Name" class="download__form-input">
-        <input type="text" name="e-mail" placeholder="Enter business email" class="download__form-input">
-        <input type="text" name="phone" placeholder="Enter phone number" class="download__form-input">
-        <input type="text" name="hypervisor" placeholder="Choose you hypervisor" class="download__form-input">
-        <select name="hypervisor" id="">
+        <h1 class="download__title">Fast backup and quick recovery</h1>
+        <p class="download__text">from NetApp snapchots with Veeam Availabiliti Suite v8</p>
 
-        </select>
+        <a href="#" class="download__netapp-link">
+          <img src="img/netapp-white.png" alt="netapp">
+        </a>
+      </div>
 
-        <input type="submit" name="download-files" class="btn btn__download-files">
+      <div class="form">
+        <form action="" class="download__form">
+          <h2 class="download__form-title">Download</h2>
+          <h2 class="download__form-title">Veeam Availability Suite v8</h2>
+          <input type="text" name="first-name" placeholder="First Name" class="download__form-input">
+          <input type="text" name="last-name" placeholder="Last Name" class="download__form-input">
+          <input type="text" name="e-mail" placeholder="Enter business email" class="download__form-input">
+          <input type="text" name="phone" placeholder="Enter phone number" class="download__form-input">
+          <input type="text" name="hypervisor" placeholder="Choose you hypervisor" class="download__form-input">
+          <select name="hypervisor" id="" class="download__form-input">
+            <option value="1">Hypervisor 1</option>
+            <option value="2">Hypervisor 2</option>
+            <option value="3">Hypervisor 3</option>
+            <option value="4">Hypervisor 4</option>
+            <option value="5">Hypervisor 5</option>
+          </select>
 
-      </form>
+          <input type="submit" name="download-files" class="btn btn__download" value="download">
 
-    </div>
-  </section>
+        </form>
+      </div>
+    </section>
+  </div>
+
 
 
   <section class="about">
@@ -90,7 +99,7 @@
           <a href="">Recovery</a>
         </li>
         <li class="nav-link__item">
-          <a href="" class="btn btn__download-files--big">Download now</a>
+          <a href="" class="btn btn__download--big">Download now</a>
         </li>
       </ul>
 

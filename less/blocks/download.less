@@ -1,0 +1,89 @@
+.download {
+  margin: 24px 0px 55px 0px;
+  padding-top: 24px;
+  background-color: @blue-color;
+  height: 522px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  .description {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    margin-right: 16px;
+  }
+
+  &__new {
+    background-color: #fff;
+    margin-left: 44px;
+    margin-top: 20px;
+    color: @red-color;
+    line-height: 42px;
+    font-weight: bold;
+    width: 100px;
+    height: 42px;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  &__title {
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0;
+    margin-top: 35px;
+    margin-left: 44px;
+  }
+
+  &__text {
+    width: 400px;
+    color: #fff;
+    font-weight: normal;
+    font-size: 24px;
+    margin: 0;
+    margin-left: 44px;
+  }
+
+  &__netapp-link {
+    margin-left: 44px;
+    margin-top: 44px;
+  }
+
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: @form-bgr-color;
+    padding: 20px;
+    border: 3px solid @form-bdr-color;
+
+
+    &-title {
+      margin: 0;
+      font-size: 18px;
+      font-weight: normal;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    &-input {
+      height: 40px;
+      width: 325px;
+      margin-bottom: 10px;
+      padding-left: 10px;
+      outline-color: transparent;
+    }
+
+    select {
+      width: 340px;
+    }
+
+  }
+}

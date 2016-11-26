@@ -7,6 +7,24 @@
   display: flex;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
+  outline-color: inherit;
+}
+.btn {
+  background-color: #f13037;
+  text-align: center;
+  color: #fff;
+  border: 0px;
+  text-transform: uppercase;
+}
+.btn__download {
+  font-size: 18px;
+  line-height: 40px;
+  margin-top: 20px;
+}
+.btn__download--big {
+  font-size: 20px;
+  line-height: 70px;
+  text-decoration: none;
 }
 .container {
   -ms-flex-pack: justify;
@@ -37,6 +55,90 @@ header {
 }
 .header__offers-text--big {
   font-size: 19px;
+}
+.download {
+  margin: 24px 0px 55px 0px;
+  padding-top: 24px;
+  background-color: #0067c5;
+  height: 522px;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.download .description {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+.download .form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  margin-right: 16px;
+}
+.download__new {
+  background-color: #fff;
+  margin-left: 44px;
+  margin-top: 20px;
+  color: #f13037;
+  line-height: 42px;
+  font-weight: bold;
+  width: 100px;
+  height: 42px;
+  text-align: center;
+  font-size: 30px;
+}
+.download__title {
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0;
+  margin-top: 35px;
+  margin-left: 44px;
+}
+.download__text {
+  width: 400px;
+  color: #fff;
+  font-weight: normal;
+  font-size: 24px;
+  margin: 0;
+  margin-left: 44px;
+}
+.download__netapp-link {
+  margin-left: 44px;
+  margin-top: 44px;
+}
+.download__form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  box-sizing: border-box;
+  background-color: #1a76cb;
+  padding: 20px;
+  border: 3px solid #3482ca;
+}
+.download__form-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: normal;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.download__form-input {
+  height: 40px;
+  width: 325px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  outline-color: transparent;
+}
+.download__form select {
+  width: 340px;
 }
 
 /*# sourceMappingURL=style.css.map */
