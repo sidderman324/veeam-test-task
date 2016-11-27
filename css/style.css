@@ -9,6 +9,11 @@
   font-family: 'Open Sans', sans-serif;
   outline-color: inherit;
 }
+.section-title {
+  margin-top: 52px;
+  font-size: 24px;
+  font-weight: bold;
+}
 .btn {
   background-color: #f13037;
   text-align: center;
@@ -181,9 +186,19 @@ header {
 .link__text--desk:before {
   content: '';
   background-image: url(../../img/desk.png);
+  background-repeat: no-repeat;
   display: inline-block;
   width: 32px;
   height: 32px;
+  margin-right: 15px;
+}
+.link__text--video:before {
+  content: '';
+  background-image: url(../../img/video.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 32px;
+  height: 24px;
   margin-right: 15px;
 }
 .nav-link {
@@ -222,6 +237,79 @@ header {
 .nav-link__item--active {
   color: #54b948;
   text-decoration: underline;
+}
+.benefits .container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+.benefits ul {
+  margin: 0;
+  margin-top: 10px;
+  padding-left: 20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.benefits li {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  text-align: left;
+}
+.benefits__text {
+  margin: 0;
+  font-size: 14px;
+  font-weight: normal;
+  color: #444444;
+  text-align: justify;
+}
+.benefits__text--bold {
+  font-weight: bold;
+}
+.benefits__scheme {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 43px;
+  margin-bottom: 25px;
+}
+.benefits__scheme-text {
+  width: 200px;
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 13px;
+  color: #666;
+  line-height: 18px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+.benefits__scheme-item {
+  display: inline-block;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+.benefits__scheme-item img {
+  border: 2px solid #e0e0e0;
+  width: 292px;
+  height: 132px;
+}
+.benefits__backup-scheme-img {
+  width: 908px;
+  border: 2px solid #e0e0e0;
+  margin-top: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */
