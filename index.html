@@ -208,12 +208,13 @@
 
 
 
-        <div class="lowrpo">
-          <div class="row">
+      <div class="lowrpo">
+        <div class="row">
           <div class="col">
             <h3 class="backup__text backup__text--bold">Fast vSphere backups with low RPOs</h3>
             <p class="backup__text">
-              Storage snapshots can be taken frequently with minimal impact to the production environment, but this can’t be your only backup solution. What if storage itself goes down, or gets corrupted? Even with storage-based replication, you need to take your data out of the single fault domain. This is why many customers prefer to additionally make true backups stored on different storage.
+              Storage snapshots can be taken frequently with minimal impact to the production environment, but this can’t be your only backup solution. What if storage itself goes down, or gets corrupted? Even with storage-based replication, you need to take your data
+              out of the single fault domain. This is why many customers prefer to additionally make true backups stored on different storage.
             </p>
 
             <p class="backup__text">
@@ -250,50 +251,51 @@
       <div class="howitwork">
         <div class="row">
           <div class="col">
-        <h3 class="backup__text backup__text--bold">How it works</h3>
+            <h3 class="backup__text backup__text--bold">How it works</h3>
+            <p class="backup__text">
+              Veeam Backup&Replication works with HP and NetApp storage products to create backups and replicas from storage snapshots in the following way. The backup/replica job:
+            </p>
+
+            <ol>
+              <li>
+                <p class="backup__text">Analyzes which VMs in the job have disks on supported storage.</p>
+              </li>
+              <li>
+                <p class="backup__text">Triggers a vSphere snapshot for all VMs located on the same storage volume. (As a part of a vSphere snapshot, Veeam’s application-aware processing of each VM is performed normally.)</p>
+              </li>
+              <li>
+                <p class="backup__text">Triggers a snapshot of said storage volume once all VM snapshots have been created.</p>
+              </li>
+              <li>
+                <p class="backup__text">Retrieves the CBT information for VM snapshots created on step 2.</p>
+              </li>
+              <li>
+                <p class="backup__text">Immediately triggers the removal of the vSphere snapshots on the production VMs.</p>
+              </li>
+              <li>
+                <p class="backup__text">Mounts the storage snapshot to one of the backup proxies connected into the storage fabric.</p>
+              </li>
+              <li>
+                <p class="backup__text">Reads new and changed virtual disk data blocks directly from the storage snapshot and transports them to the backup repository or replica VM.</p>
+              </li>
+              <li>
+                <p class="backup__text">Triggers the removal storage snapshot once all VMs have been backed up.</p>
+              </li>
+            </ol>
+          </div>
+
+
+          <div class="storage-scheme">
+            <img src="http://img.veeam.com/product_pages/v8/bfss-scheme-t.jpg " alt="" class="storage-scheme__img">
+            <span>Veeam Explorer for Storage Snapshots</span>
+          </div>
+
+        </div>
+
+
         <p class="backup__text">
-           Veeam Backup&Replication works with HP and NetApp storage products to create backups and replicas from storage snapshots in the following way. The backup/replica job:
-        </p>
-
-        <ol>
-          <li>
-            <p class="backup__text">Analyzes which VMs in the job have disks on supported storage.</p>
-          </li>
-          <li>
-            <p class="backup__text">Triggers a vSphere snapshot for all VMs located on the same storage volume. (As a part of a vSphere snapshot, Veeam’s application-aware processing of each VM is performed normally.)</p>
-          </li>
-          <li>
-            <p class="backup__text">Triggers a snapshot of said storage volume once all VM snapshots have been created.</p>
-          </li>
-          <li>
-            <p class="backup__text">Retrieves the CBT information for VM snapshots created on step 2.</p>
-          </li>
-          <li>
-            <p class="backup__text">Immediately triggers the removal of the vSphere snapshots on the production VMs.</p>
-          </li>
-          <li>
-            <p class="backup__text">Mounts the storage snapshot to one of the backup proxies connected into the storage fabric.</p>
-          </li>
-          <li>
-            <p class="backup__text">Reads new and changed virtual disk data blocks directly from the storage snapshot and transports them to the backup repository or replica VM.</p>
-          </li>
-          <li>
-            <p class="backup__text">Triggers the removal storage snapshot once all VMs have been backed up.</p>
-          </li>
-        </ol>
-        </div>
-
-
-        <div class="storage-scheme">
-          <img src="http://img.veeam.com/product_pages/v8/bfss-scheme-t.jpg " alt="" class="storage-scheme__img">
-          <span>Veeam Explorer for Storage Snapshots</span>
-        </div>
-
-        </div>
-
-
-        <p class="backup__text">
-          As the result, VMs run off snapshots for the shortest possible time, while jobs obtain data from VM snapshot files preserved in the storage snapshot. As the result, VM snapshots do not get a chance to grow large and can be committed very quickly without overloading production storage with extended merge procedure, as is the case with classic techniques for backing up from VM snapshots.
+          As the result, VMs run off snapshots for the shortest possible time, while jobs obtain data from VM snapshot files preserved in the storage snapshot. As the result, VM snapshots do not get a chance to grow large and can be committed very quickly without
+          overloading production storage with extended merge procedure, as is the case with classic techniques for backing up from VM snapshots.
         </p>
 
 
@@ -305,63 +307,89 @@
 
   <section class="recovery">
     <div class="container">
-      <h2 class="section-title">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</h2>
-      <p class="recovery__text">
-        <h3 class="recovery__text recovery__text--bold">123123123</h3> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Образ ему злых коварный, жизни встретил. Семь там курсивных обеспечивает он встретил своего, моей маленький, текстов жаренные букв большого лучше.
-      </p>
+      <h2 class="section-title">Enjoy quick granular recovery for NetApp Storage Snapshots</h2>
 
-      <ul>
-        <li>
-          <p class="recovery__text"></p>
-        </li>
-        <li>
-          <p class="recovery__text"></p>
-        </li>
-        <li>
-          <p class="recovery__text"></p>
-        </li>
-      </ul>
+      <div class="restore">
+        <div class="row">
+          <div class="col">
 
-      <p class="recovery-text">
-        Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Обеспечивает но осталось ipsum себя гор ему! Текстами послушавшись пояс эта то щеке своего вопрос живет образ жизни подзаголовок. Дал!
-      </p>
+            <h3 class="recovery__text recovery__text--bold">Restore from a storage snapshot in minutes!</h3>
+            <p class="recovery__text">
+              With Veeam Explorer for Storage Snapshots, you can take advantage of the low overhead that periodic SAN snapshots offer for low recovery point objectives (RPOs), and let Veeam Backup & Replication™ automate the whole recovery process for you, bringing
+              you low recovery time objectives (RTOs) as well. You can:
+            </p>
 
-      <a href="" class="link">
-        <span class="link__text  link__text--video"></span>
-      </a>
-      <a href="" class="link">
-        <span class="link__text  link__text--blog"></span>
-      </a>
+            <ul>
+              <li>
+                <p class="recovery__text">Recover guest OS files (for Windows, Linux, Novell , etc.), application items or an entire VM from a storage snapshot in two minutes or less</p>
+              </li>
+              <li>
+                <p class="recovery__text">Restore directly from storage snapshots, eliminating the need for staging and intermediate restores</p>
+              </li>
+              <li>
+                <p class="recovery__text">Reduce the time needed to mount snapshots 10 times or more compared to manual processes, lowering your RTOs while avoiding human errors that can occur during critical recovery steps such as mounting snapshots</p>
+              </li>
+            </ul>
 
-      <p class="recovery__text">
-        <h3 class="recovery__text recovery__text--bold">123123123</h3> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Образ ему злых коварный, жизни встретил. Семь там курсивных обеспечивает он встретил своего, моей маленький, текстов жаренные букв большого лучше.
-      </p>
+            <p class="recovery__text">
+              With Veeam Explorer for Storage Snapshots, you can take advantage of the low overhead that periodic SAN snapshots offer for low recovery point objectives (RPOs), and let Veeam Backup & Replication™ automate the whole recovery process for you, bringing
+              you low recovery time objectives (RTOs) as well. You can:
+            </p>
 
-      <div class="recovery__howitworks-scheme">
-        <img src="" alt="">
-        <span></span>
+            <a href="" class="link">
+              <span class="link__text  link__text--video">Watch video on how Veeam integrates with NetApp</span>
+            </a>
+            <a href="" class="link">
+              <span class="link__text  link__text--blog">Read blog post about Veeam and NetApp</span>
+            </a>
+
+          </div>
+
+          <div class="recovery__howitworks-scheme">
+            <img src="http://img.veeam.com/product_pages/v8/screenshots/san_IR.png " alt="san">
+            <span class="benefits__scheme-text">Veeam Explorer for Storage Snapshots</span>
+          </div>
+
+        </div>
       </div>
 
+      <div class="howitwork">
 
-      <h3 class="recovery__text recovery__text--bold">123123123</h3>
-      <p class="recovery__text">
-        Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Образ ему злых коварный, жизни встретил. Семь там курсивных обеспечивает он встретил своего, моей маленький, текстов жаренные букв большого лучше.
-      </p>
+        <h3 class="recovery__text recovery__text--bold">How it works</h3>
+        <p class="recovery__text">
+          Veeam works with HP and NetApp storage products to granular recovery from storage snapshots. Here’s how it works.
+        </p>
 
-      <ul>
-        <li>
-          <p class="recovery__text"></p>
-        </li>
-        <li>
-          <p class="recovery__text"></p>
-        </li>
-        <li>
-          <p class="recovery__text"></p>
-        </li>
-        <li>
-          <p class="recovery__text"></p>
-        </li>
-      </ul>
+        <a href="http://go.veeam.com/storage-snapshots-explorer.html" class="backup__snapshot">
+          <img src="img/restore.png" alt="restore" class="backup__snapshot-storage">
+          <span class="benefits__scheme-text">For image description</span>
+        </a>
+
+      </div>
+
+      <div class="support">
+        <h3 class="recovery__text recovery__text--bold">Supported storage:</h3>
+        <div class="row">
+        <p class="recovery__text">
+          For NetApp, all Data ONTAP based storage, including:
+        </p>
+
+        <ul>
+          <li>
+            <p class="recovery__text">NetApp FAS</p>
+          </li>
+          <li>
+            <p class="recovery__text">NetApp FlexArray (V-Series)</p>
+          </li>
+          <li>
+            <p class="recovery__text">NetApp Data ONTAP Edge VSA</p>
+          </li>
+          <li>
+            <p class="recovery__text">IBM N series</p>
+          </li>
+        </ul>
+        </div>
+      </div>
 
     </div>
   </section>

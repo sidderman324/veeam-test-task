@@ -1,0 +1,93 @@
+.recovery {
+  h3 {
+    margin: 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 64%;
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: normal;
+    color: @gray-text;
+
+    &--bold {
+      font-weight: bold;
+    }
+  }
+
+  &__howitworks-scheme {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__howitworks-scheme img {
+    width: 292px;
+    height: 175px;
+  }
+}
+
+.restore {
+  border-bottom: 1px solid @block-bottom-bdr;
+  padding-bottom: 50px;
+
+}
+
+.howitwork {
+  border-bottom: 1px solid @block-bottom-bdr;
+  padding-bottom: 50px;
+
+  .benefits__scheme-text {
+    text-align: left;
+    margin: 0;
+    margin-top: 5px;
+  }
+
+
+    .backup__snapshot img{
+      width: 930px;
+      height: 340px;
+    }
+}
+
+.support {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+
+
+  .row {
+    margin-top: 15px;
+    justify-content: space-between;
+    ul {
+      flex-basis: 50%;
+      display: inline-flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      display: inline-block;
+      margin: 0;
+    }
+  }
+  li {
+    flex-basis: 50%;
+  }
+}
