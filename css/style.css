@@ -16,6 +16,12 @@
   margin-bottom: 30px;
   color: #333;
 }
+.main-text {
+  color: #333;
+  font-size: 18px;
+  line-height: 28px;
+  font-family: 'Open Sans', sans-serif;
+}
 .btn {
   background-color: #f13037;
   text-align: center;
@@ -516,6 +522,16 @@ header {
 .support li {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+}
+.about-veeam {
+  background-color: #e5e9ee;
+  padding-bottom: 65px;
+}
+.about-veeam .container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */
